@@ -1,13 +1,15 @@
 
 SERVICE_URL="http://34.206.223.181/"
+SERV="$(systemctl is-active httpd)"
 
+if [ "${SERV}" = "active" ]; then
+ echo "Serviço APACHE online :) $(date +'%Y-%m-%d %H:%M:%S')" >> /path/to/mount/dir/enzo/reg-online.txt
+    echo "Serviço APACHE online :) "
 
-if curl --output /dev/null --silent --head --fail "$SERVICE_URL"; then
-    echo "Serviço online"
 else
-    echo "Serviço offline"
+    echo "Serviço APACHE offline :("
+  echo "Serviço APACHE offline :( $(date +'%Y-%m-%d %H:%M:%S')" >> /path/to/mount/dir/enzo/reg-offline.txt
 fi
 
 
 
-echo $(date +"%Y-%m-%d %H:%M:%S") >> $validacao/registros.txt
