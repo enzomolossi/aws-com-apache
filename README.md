@@ -47,6 +47,12 @@ Após isso basta digitar o comando:
 O asterisco de `*/5 * * * *` indica que qualquer valor é aceito para os campos de minuto, hora, dia do mês, mês e dia da semana,
 o `/5` indica que a tarefa deve ser executada a cada cinco minutos.
 
+# Módulo SSL para o servidor Apache
+SSL (Secure Sockets Layer) é um protocolo de segurança que protege a comunicação entre um navegador e um servidor web na Internet. 
+- `sudo yum install -y mod_ssl`
+
+Esse comando instala o módulo SSL para o servidor Apache, que é responsável por fornecer suporte para conexões seguras através do protocolo HTTPS.
+
 # Versionamento da atividade no Github
 Com a execução do comando `sudo yum install git -y` ( instalar o software Git ).
 Após isso inicialize o diretório como um repositório Git com o comando `git init` dentro do diretório que deseja versionar.
