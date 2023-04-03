@@ -16,19 +16,19 @@ Chaves para acesso público liberadas:
 - 443/TCP
 
 # Comandos nos Detalhes avançados da criação da instância
-- yum update -y
+- `yum update -y`
 
 atualizar todos os pacotes instalados no sistema
-- yum install httpd -y
+- `yum install httpd -y`
 
 Para instalar o servidor web Apache (httpd)
-- systemctl enable httpd && systemctl start httpd
+- `systemctl enable httpd && systemctl start httpd`
 
 Com esses dois comandos permite-se ativar o serviço do Apache para ser executado automaticamente na inicialização do sistema e iniciar o serviço imediatamente. 
 
 # Criando um sistema de arquivos EFS na AWS
 - Acessando a página de EFS deve-se clicar no botão de `Criar sistema de arquivos `, e colocar a região correta da sua instância EC2.
-- Para instalar o pacote amazon-efs-utils no Amazon Linux, é necessário executar o comando 'sudo yum install amazon-efs-utils' no terminal do sistema operacional.
+- Para instalar o pacote amazon-efs-utils no Amazon Linux, é necessário executar o comando `sudo yum install amazon-efs-utils` no terminal do sistema operacional.
 - Crie um diretório local no servidor NFS para montar o sistema de arquivos EFS.
 - Para montar o sistema de arquivos deve-se digitar o comando `sudo mount -t efs <ID_SISTEMA_ARQUIVOS>:/ /mnt/efs`
 - Por fim basta executar o comando ` df -h ` mostra o espaço em disco utilizado e disponível nos sistemas de arquivos montados no sistema operacional.
@@ -38,11 +38,11 @@ No documento que esta na master tem um scritp feito em shell script, que valida 
 
 # Execução automatizada do script a cada 5 minutos
 Para fazer a execução automática do script de validação do sistema é bem simples. Basta digitar o comando:
-- crontab -e
+- `crontab -e`
 
 (permite que os usuários agendem a execução de tarefas em horários específicos)
 Após isto basta digitar o comando:
--  */5 * * * * bash /[diretorio_que_contém_o_seu_script]/[script].sh 
+-  `*/5 * * * * bash /[diretorio_que_contém_o_seu_script]/[script].sh`
 
 O asterisco de `*/5 * * * *` indica que qualquer valor é aceito para os campos de minuto, hora, dia do mês, mês e dia da semana,
 o `/5` indica que a tarefa deve ser executada a cada cinco minutos.
