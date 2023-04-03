@@ -16,13 +16,13 @@ Chaves para acesso público liberadas:
 - 443/TCP
 
 # Comandos nos Detalhes avançados da criação da instância
-- yum update -y
+- **yum update -y**
 
 atualizar todos os pacotes instalados no sistema
-- yum install httpd -y
+- **yum install httpd -y**
 
 Para instalar o servidor web Apache (httpd)
-- systemctl enable httpd && systemctl start httpd
+- **systemctl enable httpd && systemctl start httpd**
 
 Com esses dois comandos permite-se ativar o serviço do Apache para ser executado automaticamente na inicialização do sistema e iniciar o serviço imediatamente. 
 
@@ -38,11 +38,11 @@ No documento que esta na master tem um scritp feito em shell script, que valida 
 
 # Execução automatizada do script a cada 5 minutos
 Para fazer a execução automática do script de validação do sistema é bem simples. Basta digitar o comando:
-- contab -e
+- **contab -e**
 
 (permite que os usuários agendem a execução de tarefas em horários específicos)
 Após isto basta digitar o comando:
-- */5 * * * * bash /[diretorio_que_contém_o_seu_script]/[script].sh
+- ** */5 * * * * bash /[diretorio_que_contém_o_seu_script]/[script].sh **
 
 O asterisco de `*/5 * * * *` indica que qualquer valor é aceito para os campos de minuto, hora, dia do mês, mês e dia da semana,
 o `/5` indica que a tarefa deve ser executada a cada cinco minutos.
