@@ -53,6 +53,10 @@ SSL (Secure Sockets Layer) é um protocolo de segurança que protege a comunica�
 
 Esse comando instala o módulo SSL para o servidor Apache, que é responsável por fornecer suporte para conexões seguras através do protocolo HTTPS.
 
+- `sudo service httpd restart`
+
+É usado para reiniciar o servidor web Apache no sistema operacional Linux.
+
 # Versionamento da atividade no Github
 Com a execução do comando `sudo yum install git -y` ( instalar o software Git ).
 Após isso inicialize o diretório como um repositório Git com o comando `git init` dentro do diretório que deseja versionar.
