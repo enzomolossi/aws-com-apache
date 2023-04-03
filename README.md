@@ -38,7 +38,7 @@ No documento que esta na master tem um scritp feito em shell script, que valida 
 
 # Execução automatizada do script a cada 5 minutos
 Para fazer a execução automática do script de validação do sistema é bem simples. Basta digitar o comando:
-- contab -e
+- crontab -e
 
 (permite que os usuários agendem a execução de tarefas em horários específicos)
 Após isto basta digitar o comando:
